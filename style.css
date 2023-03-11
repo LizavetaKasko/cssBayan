@@ -1,5 +1,7 @@
 body {
   background: rgb(253, 251, 251);
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 .bayan {
@@ -29,7 +31,7 @@ body {
   height: 0;
 }
 
-.bayan__item-input:checked + .bayan__item-meme {
+.bayan__item-input:checked ~ .bayan__item-meme {
   display: block;
 }
 
@@ -40,7 +42,56 @@ body {
   padding: 10px 15px;
 }
 
+.bayan__item-title:hover + .bayan__item-meme {
+  display: block;
+}
+
+.bayan__item-title::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.bayan__item-input:checked ~ .bayan__item-title::after {
+  content: "+";
+  position: absolute;
+  top: 15%;
+  right: 20px;
+  font-size: 1.5em;
+  font-weight: 500;
+  transform: rotate(45deg);
+  transition: 0.2s;
+}
+
 .bayan__item-meme {
   display: none;
   padding: 20px 175px;
 }
+
+.bayan:hover {
+  color: rgb(86, 86, 86);
+  font-weight: 600;
+  font-size: 120%;
+  transition: 0.2s;
+}
+
+.bayan__item-input:checked + .bayan__item-title {
+  color: rgb(86, 86, 86);
+  font-weight: 600;
+}
+
+/* .bayan__item-title:hover + .bayan__item-title::after {
+  content: "+";
+  position: absolute;
+  top: 15%;
+  right: 20px;
+  font-size: 1.5em;
+  font-weight: 500;
+  transform: rotate(45deg);
+  transition: 0.2s;
+} */

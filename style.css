@@ -1,0 +1,46 @@
+body {
+  background: rgb(253, 251, 251);
+}
+
+.bayan {
+  margin: 30px auto;
+  max-width: 700px;
+  background: rgb(255, 239, 216);
+  cursor: pointer;
+}
+
+.bayan__item {
+  border-top: 1px solid rgb(128, 128, 128);
+  border-bottom: 1px solid rgb(128, 128, 128);
+}
+
+#border1 {
+  border: none;
+}
+
+#border2 {
+  border: none;
+}
+
+.bayan__item-input {
+  appearance: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.bayan__item-input:checked + .bayan__item-meme {
+  display: block;
+}
+
+.bayan__item-title {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.bayan__item-meme {
+  display: none;
+  padding: 20px 175px;
+}

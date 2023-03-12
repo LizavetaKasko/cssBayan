@@ -6,53 +6,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bayan</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
+    <header><h1>CSS Bayan</h1></header>
     <div class="bayan">
       <div class="bayan__item">
-        <input class="bayan__item-input" type="checkbox" id="item_1" />
-        <label class="bayan__item-title" for="item_1">Meme 1</label>
-
-        <div class="bayan__item-meme">
-          <img src="meme1.jpg" alt="meme1" />
-        </div>
+        <input
+          class="bayan__item-input"
+          type="radio"
+          name="meme-item"
+          id="item_1"
+          checked
+        />
+        <label class="bayan__label" for="item_1">
+          <div class="bayan__item-head">
+            <p class="bayan__item-title">Meme 1</p>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="bayan__item-meme">
+            <img src="5.png" alt="meme1" />
+          </div>
+        </label>
       </div>
 
-      <div id="border2" class="bayan__item">
-        <input class="bayan__item-input" type="checkbox" id="item_2" />
-        <label class="bayan__item-title" for="item_2">Meme 2</label>
-
-        <div class="bayan__item-meme">
-          <img src="meme2.jpg" alt="meme2" />
-        </div>
+      <div class="border" class="bayan__item">
+        <input
+          class="bayan__item-input"
+          type="radio"
+          name="meme-item"
+          id="item_2"
+        />
+        <label class="bayan__label" for="item_2">
+          <div class="bayan__item-head">
+            <p class="bayan__item-title">Meme 2</p>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="bayan__item-meme">
+            <img src="4.png" alt="meme2" />
+          </div>
+        </label>
       </div>
 
       <div class="bayan__item">
-        <input class="bayan__item-input" type="checkbox" id="item_3" />
-        <label class="bayan__item-title" for="item_3">Meme 3</label>
-
-        <div class="bayan__item-meme">
-          <img src="meme2.jpg" alt="meme2" />
-        </div>
+        <input
+          class="bayan__item-input"
+          type="radio"
+          name="meme-item"
+          id="item_3"
+        />
+        <label class="bayan__label" for="item_3">
+          <div class="bayan__item-head">
+            <p class="bayan__item-title">Meme 3</p>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="bayan__item-meme">
+            <img src="3.png" alt="meme3" />
+          </div>
+        </label>
       </div>
 
-      <div id="border1" class="bayan__item">
-        <input class="bayan__item-input" type="checkbox" id="item_4" />
-        <label class="bayan__item-title" for="item_4">Meme 4</label>
-
-        <div class="bayan__item-meme">
-          <img src="meme2.jpg" alt="meme2" />
-        </div>
-      </div>
-
-      <div class="bayan__item">
-        <input class="bayan__item-input" type="checkbox" id="item_5" />
-        <label class="bayan__item-title" for="item_5">Meme 5</label>
-        <div class="bayan__item-meme">
-          <img src="meme2.jpg" alt="meme2" />
-        </div>
+      <div class="border1" class="bayan__item">
+        <input
+          class="bayan__item-input"
+          type="radio"
+          name="meme-item"
+          id="item_4"
+        />
+        <label class="bayan__label" for="item_4">
+          <div class="bayan__item-head">
+            <p class="bayan__item-title">Meme 4</p>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="bayan__item-meme">
+            <img src="2.png" alt="meme4" />
+          </div>
+        </label>
       </div>
     </div>
+    <script
+      src="https://kit.fontawesome.com/aa02a96d3e.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

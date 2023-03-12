@@ -1,27 +1,38 @@
 body {
-  background: rgb(253, 251, 251);
+  background: #edf2ec;
   overflow-x: hidden;
   width: 100vw;
 }
 
-.bayan {
-  margin: 30px auto;
-  max-width: 700px;
-  background: rgb(255, 239, 216);
+header {
+  margin: auto;
+  margin-top: 4em;
+  max-width: 50%;
   cursor: pointer;
 }
 
+h1 {
+  font-family: "Inika";
+  color: #e06733;
+  margin-left: 0.4em;
+}
+
+.bayan {
+  margin: auto;
+  max-width: 50%;
+}
+
 .bayan__item {
-  border-top: 1px solid rgb(128, 128, 128);
-  border-bottom: 1px solid rgb(128, 128, 128);
+  border-top: 0.1rem solid #e06733;
+  border-bottom: 0.1rem solid #e06733;
 }
 
-#border1 {
+.border {
   border: none;
 }
 
-#border2 {
-  border: none;
+.border1 {
+  border-bottom: 0.1rem solid #e06733;
 }
 
 .bayan__item-input {
@@ -31,67 +42,100 @@ body {
   height: 0;
 }
 
-.bayan__item-input:checked ~ .bayan__item-meme {
-  display: block;
+.bayan__label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.bayan__item-head {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: #717171;
+  font-weight: 600;
+}
+
+.fa-plus {
+  visibility: hidden;
+  font-size: 1.5em;
+  margin-right: 1em;
+  transform: rotate(0);
+  transition: transform 0.5s;
 }
 
 .bayan__item-title {
-  display: block;
-  position: relative;
-  cursor: pointer;
-  padding: 10px 15px;
-}
-
-.bayan__item-title:hover + .bayan__item-meme {
-  display: block;
-}
-
-.bayan__item-title::after {
-  content: "+";
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  font-size: 1.5em;
-  font-weight: 500;
-  transition: 0.2s;
-}
-
-.bayan__item-input:checked ~ .bayan__item-title::after {
-  content: "+";
-  position: absolute;
-  top: 15%;
-  right: 20px;
-  font-size: 1.5em;
-  font-weight: 500;
-  transform: rotate(45deg);
-  transition: 0.2s;
+  margin: 0;
+  padding: 0.8em 0.8em;
+  font-family: "Inika";
+  font-size: 1.2em;
 }
 
 .bayan__item-meme {
-  display: none;
-  padding: 20px 175px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, height 0.5s ease-in-out;
+  height: 0;
+  cursor: pointer;
 }
 
-.bayan:hover {
-  color: rgb(86, 86, 86);
-  font-weight: 600;
-  font-size: 120%;
-  transition: 0.2s;
+.bayan__item-meme img {
+  width: 20em;
+  height: 20em;
+  margin-top: -1em;
+  opacity: 1;
 }
 
-.bayan__item-input:checked + .bayan__item-title {
-  color: rgb(86, 86, 86);
-  font-weight: 600;
+.bayan:hover .fa-plus {
+  visibility: visible;
 }
 
-/* .bayan__item-title:hover + .bayan__item-title::after {
-  content: "+";
-  position: absolute;
-  top: 15%;
-  right: 20px;
-  font-size: 1.5em;
-  font-weight: 500;
+.bayan:hover .bayan__item-head {
+  color: #499a18;
+}
+
+input:checked + .bayan__label .fa-plus {
+  visibility: visible;
   transform: rotate(45deg);
-  transition: 0.2s;
-} */
+  color: #499a18;
+}
+
+input:checked + .bayan__label .bayan__item-title {
+  color: #499a18;
+}
+
+input:checked + .bayan__label .bayan__item-meme {
+  visibility: visible;
+  opacity: 1;
+  height: 20em;
+}
+
+.bayan__item-head:hover + .bayan__item-meme {
+  visibility: visible;
+  opacity: 1;
+  height: 20em;
+}
+
+.bayan__item-head:hover .fa-plus {
+  transform: rotate(45deg);
+  transition: transform 0.4s;
+}
+
+input:checked + .bayan__label .bayan__item-meme {
+  visibility: visible;
+  opacity: 1;
+  height: 20em;
+}
+
+.bayan__item-head:hover + .bayan__item-meme,
+.bayan__item-meme:hover {
+  visibility: visible;
+  opacity: 1;
+  height: 20em;
+  pointer-events: auto;
+}

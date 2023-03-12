@@ -139,3 +139,7 @@ input:checked + .bayan__label .bayan__item-meme {
   height: 20em;
   pointer-events: auto;
 }
+
+.bayan__item:hover .fa-plus {
+  transform: rotate(45deg);
+}

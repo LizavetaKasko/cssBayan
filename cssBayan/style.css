@@ -15,6 +15,7 @@ h1 {
   font-family: "Inika";
   color: #e06733;
   margin-left: 0.4em;
+  font-size: 2.2em;
 }
 
 .bayan {
@@ -33,11 +34,12 @@ h1 {
 
 .border1 {
   border-bottom: 0.1rem solid #e06733;
+  border-top: none;
 }
 
 .bayan__item-input {
-  appearance: none;
-  position: absolute;
+  display: none;
+  visibility: hidden;
   width: 0;
   height: 0;
 }
@@ -73,13 +75,18 @@ h1 {
   margin: 0;
   padding: 0.8em 0.8em;
   font-family: "Inika";
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 .bayan__item-meme {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s ease-in-out, height 0.5s ease-in-out;
+  transition: opacity 1.1s ease-in-out, height 0.5s ease-in-out;
   height: 0;
   cursor: pointer;
 }
@@ -87,7 +94,7 @@ h1 {
 .bayan__item-meme img {
   width: 20em;
   height: 20em;
-  margin-top: -1em;
+  margin-bottom: 1em;
   opacity: 1;
 }
 
@@ -112,13 +119,13 @@ input:checked + .bayan__label .bayan__item-title {
 input:checked + .bayan__label .bayan__item-meme {
   visibility: visible;
   opacity: 1;
-  height: 20em;
+  height: 21em;
 }
 
 .bayan__item-head:hover + .bayan__item-meme {
   visibility: visible;
   opacity: 1;
-  height: 20em;
+  height: 21em;
 }
 
 .bayan__item-head:hover .fa-plus {
@@ -129,17 +136,95 @@ input:checked + .bayan__label .bayan__item-meme {
 input:checked + .bayan__label .bayan__item-meme {
   visibility: visible;
   opacity: 1;
-  height: 20em;
+  height: 21em;
 }
 
 .bayan__item-head:hover + .bayan__item-meme,
 .bayan__item-meme:hover {
   visibility: visible;
   opacity: 1;
-  height: 20em;
+  height: 21em;
   pointer-events: auto;
 }
 
 .bayan__item:hover .fa-plus {
   transform: rotate(45deg);
+}
+
+@media screen and (max-width: 860px) {
+  .bayan__item-meme img {
+    width: 18em;
+    height: 18em;
+    margin-bottom: 1em;
+    opacity: 1;
+  }
+
+  .bayan__item-meme {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.2s ease-in-out, height 0.5s ease-in-out;
+    height: 0;
+    cursor: pointer;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .fa-plus,
+  .bayan__item-title {
+    font-size: 1.1em;
+  }
+
+  header,
+  .bayan {
+    max-width: 75%;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .bayan__item-meme img {
+    width: 11em;
+    height: 11em;
+    margin-bottom: 1em;
+    opacity: 1;
+  }
+
+  .bayan__item-meme {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.2s ease-in-out, height 0.5s ease-in-out;
+    height: 0;
+    cursor: pointer;
+  }
+
+  h1 {
+    font-size: 1.3em;
+  }
+
+  .fa-plus,
+  .bayan__item-title {
+    font-size: 0.8em;
+  }
+
+  input:checked + .bayan__label .bayan__item-meme {
+    visibility: visible;
+    opacity: 1;
+    height: 12em;
+  }
+
+  header,
+  .bayan {
+    max-width: 75%;
+  }
 }
